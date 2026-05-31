@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:220px;
+    background:#111827;
+    padding:15px;
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.logo{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.sidebar button{
+    width:100%;
+    padding:14px;
+    margin-bottom:10px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar button:hover{
+    background:#38bdf8;
+}
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    text-align:center;
+}
+
+.main h1{
+    font-size:55px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+#infoBox{
+    background:#1e293b;
+    width:100%;
+    max-width:500px;
+    padding:20px;
+    border-radius:15px;
+}
+
+.saweria{
+    margin-top:15px;
+    padding:12px 25px;
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.credit{
+    margin-top:20px;
+    color:#94a3b8;
+}
+
+/* HP */
+@media (max-width:768px){
+
+    .sidebar{
+        width:110px;
+        padding:8px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .sidebar button{
+        font-size:11px;
+        padding:10px;
+    }
+
+    .main{
+        padding:10px;
+    }
+
+    .main h1{
+        font-size:28px;
+    }
+
+    #infoBox{
+        max-width:260px;
+        padding:15px;
+    }
+
+    .saweria{
+        padding:10px 18px;
+        font-size:13px;
+    }
+    
+    #loadingScreen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loading-box{
+    width:80%;
+    max-width:500px;
+    text-align:center;
+}
+
+.loading-box h1{
+    color:#38bdf8;
+    margin-bottom:20px;
+    text-shadow:0 0 15px #38bdf8;
+}
+
+.progress-container{
+    width:100%;
+    height:20px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+#progressBar{
+    width:0%;
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(90deg,#38bdf8,#22c55e);
+    transition:.1s;
+}
+
+#loadingText{
+    margin-top:10px;
+    color:white;
+}
+}
